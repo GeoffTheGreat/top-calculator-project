@@ -25,7 +25,7 @@ body {
   height: 15vh;
   background-color: bisque;
   border: 2px solid black;
-  text-align: right;
+
   display: flex;
   font-size: 2rem;
   align-items: center;
@@ -75,4 +75,7 @@ body {
 .digit:hover,
 .p__o:hover {
   opacity: 0.9;
+}
+#period {
+  font-weight: bolder;
 }
