@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculator</title>
+    <script src="script.js" defer></script>
+    <!-- link font awesome for logos symbols and numbers -->
+    <script
+      src="https://kit.fontawesome.com/61bea6fb0e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="flex">
+    <div class="calc--body flex">
+      <div class="calc--screen" id="screen"></div>
+      <div class="calc--buttons flex">
+        <div class="main--btns flex">
+          <div class="secondary--oper flex">
+            <button class="s__o fa-solid fa-trash-can" id="clear"></button>
+            <button
+              class="s__o fa-solid fa-plus-minus"
+              id="plus-minus"
+            ></button>
+            <button class="s__o fa-solid fa-percent" id="percent"></button>
+          </div>
+          <div class="dig--row flex">
+            <button class="digit fa-solid fa-7" id="nr7"></button>
+            <button class="digit fa-solid fa-8" id="nr8"></button>
+            <button class="digit fa-solid fa-9" id="nr9"></button>
+          </div>
+          <div class="dig--row flex">
+            <button class="digit fa-solid fa-4" id="nr4"></button>
+            <button class="digit fa-solid fa-5" id="nr5"></button>
+            <button class="digit fa-solid fa-6" id="nr6"></button>
+          </div>
+          <div class="dig--row flex">
+            <button class="digit fa-solid fa-1" id="nr1"></button>
+            <button class="digit fa-solid fa-2" id="nr2"></button>
+            <button class="digit fa-solid fa-3" id="nr3"></button>
+          </div>
+          <div class="dig--row flex">
+            <button class="digit lrg fa-solid fa-0" id="nr0"></button>
+            <button class="digit" id="period"><strong>.</strong></button>
+          </div>
+        </div>
+        <div class="main--operators flex">
+          <button class="p__o fa-solid fa-divide" id="divide"></button>
+          <button class="p__o fa-solid fa-xmark" id="multiply"></button>
+          <button class="p__o fa-solid fa-minus" id="minus"></button>
+          <button class="p__o fa-solid fa-plus" id="plus"></button>
+          <button class="p__o fa-solid fa-equals" id="equals"></button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h1>
+        <!-- Built an designed by Timothy <i class="fa-brands fa-github-square"></i> -->
+      </h1>
+    </footer>
+  </body>
+</html>

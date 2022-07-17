@@ -10,3 +10,5 @@ for this project I must design a calculator using HTMl, CSS and JavaScript
 -There should be a button for every digit, operand and equals
 -it should evaluate the operation every time a new operand is selected ie 8+9\*10 =170 and != 98
 -users should be able to use floating point numbers
+
+- the operands should be a different color
