@@ -8,6 +8,8 @@ calScreen.textContent = "0";
 calScreen.style.justifyContent = "flex-end";
 const buttons = Array.from(document.querySelectorAll("button"));
 
+window.addEventListener("keydown", keyPress);
+
 buttons.forEach((button) => {
   button.addEventListener("click", identify);
 });
@@ -76,9 +78,18 @@ function toPercent() {
   displayOperand = Math.round(parseFloat(displayOperand) * 100) / 10000;
   calScreen.textContent = displayOperand.toString();
 }
+function keyPress(e) {
+  let key = document.querySelector(`button[data-key="${e.keyCode}"]`);
+  if (key != null) {
+    let btnId = key.getAttribute("id");
+    let myObj = { target: { id: btnId } };
+    identify(myObj);
+  }
+}
 
 function identify(e) {
   let btnId = e.target.id;
+
   switch (btnId) {
     case "nr0":
     case "nr1":
@@ -92,7 +103,6 @@ function identify(e) {
     case "nr9":
       displayOperand += btnId[2];
       calScreen.textContent = displayOperand;
-      console.log(e);
       break;
     case "period":
       displayOperand = calScreen.textContent;
