@@ -6,6 +6,7 @@ let calculated = 0;
 const calScreen = document.getElementById("screen");
 calScreen.textContent = "0";
 calScreen.style.justifyContent = "flex-end";
+
 const buttons = Array.from(document.querySelectorAll("button"));
 
 window.addEventListener("keydown", keyPress);
@@ -59,7 +60,7 @@ function doCalculation() {
       case "minus":
         calculated =
           Math.round(
-            parseFloat(firstOperand) * parseFloat(secondOperand) * 100
+            (parseFloat(firstOperand) - parseFloat(secondOperand)) * 100
           ) / 100;
         break;
     }
@@ -89,7 +90,6 @@ function keyPress(e) {
 
 function identify(e) {
   let btnId = e.target.id;
-
   switch (btnId) {
     case "nr0":
     case "nr1":
@@ -101,8 +101,11 @@ function identify(e) {
     case "nr7":
     case "nr8":
     case "nr9":
-      displayOperand += btnId[2];
-      calScreen.textContent = displayOperand;
+      if (displayOperand.length < 13) {
+        displayOperand += btnId[2];
+        calScreen.textContent = displayOperand;
+      }
+
       break;
     case "period":
       displayOperand = calScreen.textContent;

@@ -94,3 +94,11 @@ a {
   text-decoration: none;
   color: aliceblue;
 }
+@media (max-width: 750px) {
+  :root {
+    font-size: 3px;
+  }
+  .calc--screen {
+    font-size: 3.5rem;
+  }
+}
